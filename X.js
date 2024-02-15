@@ -2,11 +2,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-
 app.get('/tweets', (req, res) => {
-  res.json({ message:'Récupération du tweet'});
+  res.json({ message: 'Récupération de tous les tweets' });
 });
-
 
 app.get('/tweets/:id', (req, res) => {
   const tweetId = req.params.id;
